@@ -17,7 +17,7 @@ yay -S ttf-jetbrains-mono-nerd picom
 # Installation
 
 ```
-git clone https://github.com/frtuisaladchan/dwm
+git clone https://github.com/fruitsaladchan/dwm.git
 cd dwm
 sudo make install
 ```
