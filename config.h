@@ -1,13 +1,11 @@
-/* See LICENSE file for copyright and license details. */
-
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static unsigned int gappih    = 10;      
-static unsigned int gappiv    = 10; 
-static unsigned int gappoh    = 10;      
-static unsigned int gappov    = 10;      
-static int smartgaps          = 0;
+static unsigned int gappih    = 10;       /* horiz inner gap between windows */
+static unsigned int gappiv    = 10;       /* vert inner gap between windows */
+static unsigned int gappoh    = 10;       
+static unsigned int gappov    = 10;       
+static int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=11", "UbuntuMono Nerd Font:pixelsize=11:antialias=true"};
@@ -23,6 +21,8 @@ static char *colors[][3] = {
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
        [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
 };
+
+/* tagging */
 
 /* tagging */
 static const char *tags[] = {" 󰣇 ", "  ", "  ", " 󰉋 ", "  ", "  "};
@@ -80,6 +80,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
+    { MODKEY,			            XK_f,      togglefullscr,  {0} },
 	{ MODKEY,			            XK_a,      togglegaps,     {0} },
 	{ MODKEY|ShiftMask,		        XK_a,      defaultgaps,    {0} },
     { MODKEY,                       XK_z,      incrgaps,       {.i = +3 } },

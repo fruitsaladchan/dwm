@@ -16,7 +16,7 @@ static void centeredfloatingmaster(Monitor *m);
 /* static void deck(Monitor *m); */
 static void dwindle(Monitor *m);
 static void fibonacci(Monitor *m, int s);
-static void grid(Monitor *m);
+/* static void grid(Monitor *m); */
 /* static void nrowgrid(Monitor *m); */
 static void spiral(Monitor *m);
 static void tile(Monitor *m);
