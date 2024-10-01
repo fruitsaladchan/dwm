@@ -11,7 +11,7 @@ my fork of suckless dwm
 # Requrirments
 
 ```
-yay -S ttf-jetbrains-mono-nerd picom 
+yay -S ttf-jetbrains-mono-nerd picom xwallpaper
 ```
 
 # Installation
