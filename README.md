@@ -2,7 +2,7 @@
 
 # patches
 - vanity gaps
-- layouts (centered master, fibonacci, bstack,gapless grid. horiz grid,)
+- layouts (centered master, fibonacci, bstack,gapless grid. horiz grid)
 - actual full screen
 - swallow
 - xrdb (to read pywal colors)
