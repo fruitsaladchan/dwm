@@ -8,6 +8,6 @@
 - xrdb (to read pywal colors)
 
 # requrirments
-`
-yay -S ttf-jetbrainmono-nerd
-`
+```
+yay -S
+```
