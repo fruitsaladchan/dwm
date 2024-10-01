@@ -1,4 +1,4 @@
-# dwm
+# Dwm
 my fork of suckless dwm
 
 # Patches
