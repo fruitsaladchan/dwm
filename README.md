@@ -8,7 +8,7 @@ my fork of suckless dwm
 - swallow
 - xrdb (to read pywal colors)
 
-# Requrirments
+# Requirements
 
 ```
 yay -S ttf-jetbrains-mono-nerd picom xwallpaper
