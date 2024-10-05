@@ -4,12 +4,12 @@ my fork of suckless dwm
 # Patches
 - vanity gaps
 - layouts (centered master, fibonacci, bstack,gapless grid. horiz grid)
-- actual full screen
-- swallow
-- alpha for dwm bar transpareny
-- notitle
-- attach below
-- splitstatus to get date and time in the center of the bar
+- Actual full screen
+- Swallow
+- Alpha for dwm bar transpareny
+- Notitle
+- Attach below with binding
+- Splitstatus to get date and time in the center of the bar
 
 # Requirements
 
