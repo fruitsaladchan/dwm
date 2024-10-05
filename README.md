@@ -9,6 +9,7 @@ my fork of suckless dwm
 - alpha for dwm bar transpareny
 - notitle
 - attach below
+- splitstatus to get date and time in the center of the bar
 
 # Requirements
 
