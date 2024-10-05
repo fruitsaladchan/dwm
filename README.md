@@ -29,4 +29,5 @@ sudo make install
 
 - i am using [luke smiths st](https://github.com/LukeSmithxyz/st) for my terminal
 - if you want my bar move the dwmbar.sh in your ~/.local/bin/ and start it up with xprofile
+- i am using [brillo](https://github.com/CameronNemo/brillo) for brightness 
 - i am also using picom with this setup to get animations and blurred terminals. if you want to use my config move the picom.conf to ~/.config/picom/
