@@ -10,6 +10,7 @@ my fork of suckless dwm
 - Notitle
 - Attach below (with binding)
 - Splitstatus to get date and time in the center of the bar
+- always center
 
 # Requirements
 
