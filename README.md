@@ -7,6 +7,8 @@ my fork of suckless dwm
 - actual full screen
 - swallow
 - alpha for dwm bar transpareny
+- notitle
+- attach below
 
 # Requirements
 
