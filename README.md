@@ -8,13 +8,13 @@ my fork of suckless dwm
 - Swallow
 - Alpha for dwm bar transpareny
 - Notitle
-- Attach below with binding
+- Attach below (with binding)
 - Splitstatus to get date and time in the center of the bar
 
 # Requirements
 
 ```
-yay -S ttf-jetbrains-mono-nerd
+yay -S ttf-jetbrains-mono-nerd xwallpaper 
 ```
 
 # Installation
