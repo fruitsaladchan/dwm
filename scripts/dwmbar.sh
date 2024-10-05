@@ -2,10 +2,23 @@
 
 interval=0
 
+# vol() {
+#     amixer sget Master | grep 'off' &> /dev/null
+#     if [ $? -eq 0 ] 
+#     then 
+#         printf "^c$blue^^b$black^  "
+#     else
+#         printf "^c$blue^^b$black^  "
+#     fi
+#     value="$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))"
+#     printf "^c$blue^^b$black^$value%"
+# }
+
 brightness() {
   printf "  "
   printf "%.0f\n" $(cat /sys/class/backlight/acpi_video0/brightness)
 }
+
 
 mem() {
   printf " "
@@ -26,7 +39,7 @@ battery() {
         int_value=$(printf "%.0f" "$value")
 
         if ((int_value > 98)); then
-            icon=" "
+            icon=" " 
         elif ((int_value > 75)); then
             icon=" "
         elif ((int_value > 40)); then
@@ -39,33 +52,46 @@ battery() {
 
         printf "$icon"
     else
-        printf " "
+        printf " "  
     fi
 
     get_capacity=$(acpi -b | grep -oP '(?<=, )\d+(?=%)')
     printf "$get_capacity%%"
 }
 
+# wlan() {
+# 	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
+#     up) printf " " ;;
+# 	down | dormant) printf "󰤭 " ;;
+# 	esac
+# }
+
 wlan() {
-        case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
+	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
     up) printf "  $(iwgetid -r)" ;;
-        down | dormant) printf "󰤭  Disconnected" ;;
-        esac
+	down | dormant) printf "󰤭  Disconnected" ;;
+	esac
 }
 
+# day() {
+# 	printf " "
+# 	printf "$(date '+%a %d %B')"
+# }
+
+# clock() {
+# 	printf " "
+# 	printf "$(date '+%I:%M')"
+# }
+
 date_time() {
-        printf " $(date '+%a %d %B') |  $(date '+%I:%M %p')"
+	printf " $(date '+%a %d %B') |  $(date '+%I:%M %p')"
 }
 
 while true; do
 
     [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ]
 
-    sleep 1 && xsetroot -name "$(date_time)                                       $(wlan)  $(battery)  $(mem)
- $(cpu) "
+    sleep 1 && xsetroot -name "$(date_time) ; $(wlan)  $(battery)  $(mem)  $(cpu) "
 done
-
-
-
 
 
