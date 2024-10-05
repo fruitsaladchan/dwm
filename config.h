@@ -13,8 +13,8 @@ static const unsigned int gappiv    = 9;       /* vert inner gap between windows
 static const unsigned int gappoh    = 9;       /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov    = 9;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
-static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=10", "UbuntuMono Nerd Font:pixelsize=10:antialias=true"};
-static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=10";
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=10.5", "UbuntuMono Nerd Font:pixelsize=10.5:antialias=true"};
+static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=10.5";
 static const char col_gray3[]       = "#f1be9b"; 
 static const char col_gray1[]       = "#020914";
 static const char col_gray2[]       = "#a8856c";
@@ -54,6 +54,7 @@ static int attachbelow = 1;    /* 1 means attach at the end */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 #include "vanitygaps.c"
+#include <X11/XF86keysym.h>
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
@@ -129,6 +130,8 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+    { 0, XF86XK_MonBrightnessUp,               spawn,          SHCMD("changebrightness up") },
+	{ 0, XF86XK_MonBrightnessDown,             spawn,          SHCMD("changebrightness down") },
 };
 
 /* button definitions */
