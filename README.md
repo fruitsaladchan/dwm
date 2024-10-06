@@ -8,14 +8,15 @@ my fork of suckless dwm
 - Swallow
 - Alpha for dwm bar transpareny
 - Notitle
-- Attach below (with binding)
+- Attach below (with tab binding)
 - Splitstatus to get date and time in the center of the bar
 - always center
 
 # Requirements
 
 ```
-yay -S ttf-jetbrains-mono-nerd xwallpaper 
+yay -S ttf-jetbrains-mono-nerd xwallpaper xorg-server xorg-xinit xdotool libx11 libxinerama libxft xorg
+
 ```
 
 # Installation
@@ -24,6 +25,7 @@ yay -S ttf-jetbrains-mono-nerd xwallpaper
 git clone https://github.com/fruitsaladchan/dwm.git
 cd dwm
 sudo make install
+
 ```
 
 # Extra
