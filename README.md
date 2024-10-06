@@ -1,7 +1,7 @@
 # Dwm
 my fork of suckless dwm
 
-https://github.com/fruitsaladchan/dwm/blob/main/assets/dwm2.png
+![img1](images/dwm1.png)
 
 
 # Patches
