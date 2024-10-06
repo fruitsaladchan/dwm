@@ -3,10 +3,8 @@
 case $1 in
 up)
 	brillo -A 5 -q
-	# send_notification "$1"
 	;;
 down)
 	brillo -U 5 -q
-	# send_notification "$1"
 	;;
 esac
