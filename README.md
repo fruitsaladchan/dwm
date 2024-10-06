@@ -4,6 +4,10 @@ my fork of suckless dwm
 ![img1](assets/dwm1.png)
 
 
+![img2](assets/dwm2.png)
+
+
+
 # Patches
 - vanity gaps
 - layouts (centered master, fibonacci, bstack,gapless grid. horiz grid)
