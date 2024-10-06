@@ -16,7 +16,6 @@ my fork of suckless dwm
 
 ```
 yay -S ttf-jetbrains-mono-nerd xwallpaper xorg-server xorg-xinit xdotool libx11 libxinerama libxft xorg
-
 ```
 
 # Installation
@@ -25,7 +24,12 @@ yay -S ttf-jetbrains-mono-nerd xwallpaper xorg-server xorg-xinit xdotool libx11 
 git clone https://github.com/fruitsaladchan/dwm.git
 cd dwm
 sudo make install
+```
+if you want to make changes to the configuration you need to edit config.h and recompile it with 
 
+```
+sudo make
+sudo make install
 ```
 
 # Extra
