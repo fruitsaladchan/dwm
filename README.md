@@ -1,6 +1,9 @@
 # Dwm
 my fork of suckless dwm
 
+https://github.com/fruitsaladchan/dwm/blob/main/assets/dwm2.png
+
+
 # Patches
 - vanity gaps
 - layouts (centered master, fibonacci, bstack,gapless grid. horiz grid)
