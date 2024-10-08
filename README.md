@@ -18,6 +18,7 @@ my fork of suckless dwm
 - Attach below (with tab binding)
 - Splitstatus to get date and time in the center of the bar
 - always center
+- sticky
 
 # Requirements
 
