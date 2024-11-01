@@ -59,12 +59,6 @@ battery() {
     printf "$get_capacity%%"
 }
 
-# wlan() {
-# 	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-#     up) printf " " ;;
-# 	down | dormant) printf "󰤭 " ;;
-# 	esac
-# }
 
 wlan() {
 	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
@@ -73,15 +67,6 @@ wlan() {
 	esac
 }
 
-# day() {
-# 	printf " "
-# 	printf "$(date '+%a %d %B')"
-# }
-
-# clock() {
-# 	printf " "
-# 	printf "$(date '+%I:%M')"
-# }
 
 date_time() {
 	printf " $(date '+%a %d %B') |  $(date '+%I:%M %p')"
