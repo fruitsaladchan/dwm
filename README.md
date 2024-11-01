@@ -13,12 +13,12 @@ my fork of suckless dwm
 - layouts (centered master, fibonacci, bstack,gapless grid. horiz grid)
 - Actual full screen
 - Swallow
-- Alpha for dwm bar transpareny
+- Alpha (for dwm bar transpareny)
 - Notitle
 - Attach below (with tab binding)
 - Splitstatus to get date and time in the center of the bar
-- always center
-- sticky
+- Always center
+- Sticky
 
 # Requirements
 
