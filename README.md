@@ -16,7 +16,7 @@ my fork of suckless dwm
 - Alpha (for dwm bar transpareny)
 - Notitle
 - Attach below (with tab binding)
-- Splitstatus to get date and time in the center of the bar
+- Splitstatus (used to get date and time in the center of the bar)
 - Always center
 - Sticky
 
