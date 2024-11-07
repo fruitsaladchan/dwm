@@ -23,7 +23,7 @@ my fork of suckless dwm
 # Requirements
 
 ```
-yay -S gcc git ttf-jetbrains-mono-nerd xwallpaper base-devel xorg-server xorg-xinit xdotool libx11 libxinerama libxft xorg 
+yay -S gcc git ttf-jetbrains-mono-nerd base-devel xorg-server xorg-xinit xdotool libx11 libxinerama libxft xorg 
 ```
 
 ## optional
