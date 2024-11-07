@@ -42,7 +42,8 @@ sudo make install
 
 # Extra
 
-- i am using [luke smiths st](https://github.com/LukeSmithxyz/st) for my terminal + pywal
+- i am using [luke smiths dmenu](https://github.com/LukeSmithxyz/dmenu)
+- im also using kitty for my terminal + pywal
 - if you want my bar move the dwmbar.sh in your ~/.local/bin/ and start it up with xinitrc
 - i am using [brillo](https://github.com/CameronNemo/brillo) for brightness with a changebrighess script 
 - i am also using picom with this setup to get animations and blurred terminals. if you want to use my config move the [picom.conf](https://github.com/fruitsaladchan/dwm/blob/7f8b67d6ca94f382b02d17053103163ee7562e52/config/picom.conf) to ~/.config/picom/
