@@ -100,7 +100,7 @@ static const Key keys[] = {
     {MODKEY | ShiftMask, XK_s, spawn, SHCMD("flameshot gui")},
     {MODKEY, XK_s, togglesticky, {0}},
     {MODKEY, XK_a, togglegaps, {0}},
-    {MODKEY, XK_p, spawn, SHCMD("pic.sh")},
+    {MODKEY, XK_p, spawn, SHCMD("dmenu-wallpaper.sh")},
     {MODKEY | ShiftMask, XK_a, defaultgaps, {0}},
     {MODKEY, XK_z, incrgaps, {.i = +3}},
     {MODKEY, XK_x, incrgaps, {.i = -3}},
