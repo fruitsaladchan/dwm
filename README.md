@@ -1,5 +1,5 @@
 # Dwm
-my fork of suckless dwm
+## my fork of suckless dwm
 
 ![img1](assets/dwm1.png)
 
