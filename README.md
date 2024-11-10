@@ -5,7 +5,7 @@
 
 ![img2](assets/2024-11-10_13-12.png)
 
-![img3](assets/dwm2.png)
+![img3](assets/dwm1.png)
 
 
 
