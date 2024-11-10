@@ -1,10 +1,11 @@
 # Dwm
 ## my fork of suckless dwm
 
-![img1](assets/dwm1.png)
+![img1](assets/2024-11-10_02-47.png)
 
+![img2](assets/2024-11-10_13-12.png)
 
-![img2](assets/dwm2.png)
+![img3](assets/dwm2.png)
 
 
 
