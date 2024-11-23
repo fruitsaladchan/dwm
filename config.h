@@ -16,8 +16,8 @@ static const unsigned int gappov =
 static int smartgaps =
     0; /* 1 means no outer gap when there is only one window */
 static const char *fonts[] = {
-    "JetBrainsMono Nerd Font:size=10.5",
-    "UbuntuMono Nerd Font:pixelsize=10.5:antialias=true"};
+    "JetBrainsMono Nerd Font:size=12",
+    "UbuntuMono Nerd Font:pixelsize=12:antialias=true"};
 static const char dmenufont[] = "JetBrainsMono Nerd Font:size=10.5";
 static const char col_gray3[] = "#f1be9b";
 static const char col_gray1[] = "#020914";
@@ -40,6 +40,11 @@ static const unsigned int alphas[][3] = {
 /* tagging */
 static const char *tags[] = {" 󰣇 ", "  ", "  ",
                              " 󰉋 ", "  ", "  "};
+
+static const unsigned int ulinepad = 5;
+static const unsigned int ulinestroke = 2;
+static const unsigned int ulinevoffset = 0;
+static const int ulineall = 0;
 
 static const Rule rules[] = {
     /* xprop(1):
