@@ -72,11 +72,15 @@ date_time() {
 	printf " $(date '+%a %d %B') |  $(date '+%I:%M %p')"
 }
 
+temp() {
+    printf  " $(sensors | grep 'Core 0' | awk '{print $3}' | tr -d '+')"
+}
+
 while true; do
 
     [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ]
 
-    sleep 1 && xsetroot -name "$(date_time) ; $(wlan)  $(battery)  $(mem)  $(cpu) "
+    sleep 1 && xsetroot -name "$(date_time) ; $(wlan)  $(battery)  $(temp)  $(mem)  $(cpu) "
 done
 
 
