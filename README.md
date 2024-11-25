@@ -20,6 +20,8 @@
 - Splitstatus (used to get date and time in the center of the bar)
 - Always center
 - Sticky
+- always center
+- underline tags
 
 # Requirements
 
@@ -37,6 +39,7 @@ yay -S kitty pywal xwallpaper picom acpi sysstat wireless_tools zsh flameshot
 ```
 git clone https://github.com/fruitsaladchan/dwm.git
 cd dwm
+sudo make
 sudo make install
 ```
 if you want to make changes to the configuration you need to edit config.h and recompile it with 
