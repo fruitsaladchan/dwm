@@ -31,7 +31,7 @@ yay -S gcc git ttf-jetbrains-mono-nerd base-devel xorg-server xorg-xinit xdotool
 
 ## optional
 ```
-yay -S kitty pywal xwallpaper picom acpi sysstat wireless_tools zsh flameshot
+yay -S kitty pywal xwallpaper picom acpi sysstat wireless_tools zsh flameshot lm_sensors
 ```
 
 # Installation
