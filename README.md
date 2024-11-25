@@ -20,7 +20,7 @@
 - Splitstatus (used to get date and time in the center of the bar)
 - Always center
 - Sticky
-- always center
+- pertag
 - underline tags
 
 # Requirements
