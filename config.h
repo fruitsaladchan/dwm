@@ -50,6 +50,7 @@ static const Rule rules[] = {
        isterminal  noswallow  monitor */
     {"firefox", NULL, NULL, 1 << 8, 0, 0, -1, -1},
     {"St", NULL, NULL, 0, 0, 1, 0, -1},
+    {"kitty", NULL, NULL, 0, 0, 1, 0, -1},
 };
 
 /* layout(s) */
@@ -84,8 +85,7 @@ static const Layout layouts[] = {
   }
 
 /* commands */
-static char dmenumon[2] =
-    "0"; /* component of dmenucmd, manipulated in spawn() */
+static char dmenumon[2] = "0";
 static const char *dmenucmd[] = {
     "dmenu_run", "-m",      dmenumon, "-fn",    dmenufont, "-nb",     col_gray1,
     "-nf",       col_gray3, "-sb",    col_cyan, "-sf",     col_gray4, NULL};
@@ -127,10 +127,14 @@ static const Key keys[] = {
     {MODKEY | ShiftMask, XK_comma, tagmon, {.i = -1}},
     {MODKEY | ShiftMask, XK_period, tagmon, {.i = +1}},
     TAGKEYS(XK_1, 0) TAGKEYS(XK_2, 1) TAGKEYS(XK_3, 2) TAGKEYS(XK_4, 3)
-        TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6) TAGKEYS(XK_8, 7)
-            TAGKEYS(XK_9, 8){MODKEY | ShiftMask, XK_q, quit, {0}},
-    {0, XF86XK_MonBrightnessUp, spawn, SHCMD("changebrightness up")},
-    {0, XF86XK_MonBrightnessDown, spawn, SHCMD("changebrightness down")},
+    TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6) TAGKEYS(XK_8, 7)
+    TAGKEYS(XK_9, 8){MODKEY | ShiftMask, XK_q, quit, {0}},
+    { 0, XF86XK_MonBrightnessUp, spawn, SHCMD("changebrightness up")},
+    { 0, XF86XK_MonBrightnessDown, spawn, SHCMD("changebrightness down")},
+    { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +5%") },
+    { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%") },
+    { 0, XF86XK_AudioMute, spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle") },
+
 };
 
 static const Button buttons[] = {
