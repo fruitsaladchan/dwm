@@ -11,8 +11,8 @@ static const unsigned int gappoh = 9; /* horiz outer gap between windows and scr
 static const unsigned int gappov = 9; /* vert outer gap between windows and screen edge */
 static int smartgaps = 0; /* 1 means no outer gap when there is only one window */
 static const char *fonts[] = {
-    "JetBrainsMono Nerd Font:size=12",
-    "UbuntuMono Nerd Font:pixelsize=12:antialias=true"};
+    "JetBrainsMono Nerd Font:size=12.5",
+    "UbuntuMono Nerd Font:pixelsize=12.5:antialias=true"};
 static const char dmenufont[] = "JetBrainsMono Nerd Font:size=10.5";
 static const char col_gray3[] = "#f1be9b";
 static const char col_gray1[] = "#020914";
@@ -86,9 +86,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0";
-static const char *dmenucmd[] = {
-    "dmenu_run", "-m",      dmenumon, "-fn",    dmenufont, "-nb",     col_gray1,
-    "-nf",       col_gray3, "-sb",    col_cyan, "-sf",     col_gray4, NULL};
+static const char *dmenucmd[] = {"dmenu_run", NULL};
 static const char *termcmd[] = {"kitty", NULL};
 
 static const Key keys[] = {
