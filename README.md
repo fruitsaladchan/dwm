@@ -22,6 +22,7 @@
 - Sticky
 - pertag
 - underline tags
+- movestack
 
 # Requirements
 
