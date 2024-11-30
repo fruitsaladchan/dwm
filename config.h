@@ -22,17 +22,14 @@ static const char col_cyan[] = "#63576E";
 static const unsigned int baralpha = 140;
 static const unsigned int borderalpha = 140;
 static const char *colors[][3] = {
-    /*               fg         bg         border   */
     [SchemeNorm] = {col_gray3, col_gray1, col_gray2},
     [SchemeSel] = {col_gray4, col_cyan, col_cyan},
 };
 static const unsigned int alphas[][3] = {
-    /*               fg      bg        border*/
     [SchemeNorm] = {OPAQUE, baralpha, borderalpha},
     [SchemeSel] = {OPAQUE, baralpha, borderalpha},
 };
 
-/* tagging */
 static const char *tags[] = {" 󰣇 ", "  ", "  ",
                              " 󰉋 ", "  ", "  "};
 
@@ -42,12 +39,6 @@ static const unsigned int ulinevoffset = 0;
 static const int ulineall = 0;
 
 static const Rule rules[] = {
-    /* xprop(1):
-     *	WM_CLASS(STRING) = instance, class
-     *	WM_NAME(STRING) = title
-     */
-    /* class                instance  title           tags mask  isfloating
-       isterminal  noswallow  monitor */
     {"firefox", NULL, NULL, 1 << 8, 0, 0, -1, -1},
     {"St", NULL, NULL, 0, 0, 1, 0, -1},
     {"kitty", NULL, NULL, 0, 0, 1, 0, -1},
@@ -63,9 +54,8 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 #include "vanitygaps.c"
 #include <X11/XF86keysym.h>
 static const Layout layouts[] = {
-    /* symbol     arrange function */
-    {"[]=", tile}, /* first entry is default */
-    {"><>", NULL}, /* no layout function means floating behavior */
+    {"[]=", tile},
+    {"><>", NULL},
     {"[M]", monocle},  {"|M|", centeredmaster}, {">M>", centeredfloatingmaster},
     {"TTT", bstack},   {"===", bstackhoriz},    {"[@]", spiral},
     {"[\\]", dwindle}, {"---", horizgrid},      {":::", gaplessgrid},
@@ -89,6 +79,7 @@ static char dmenumon[2] = "0";
 static const char *dmenucmd[] = {"dmenu_run", NULL};
 static const char *termcmd[] = {"kitty", NULL};
 
+#include "movestack.c"
 static const Key keys[] = {
     {MODKEY, XK_d, spawn, {.v = dmenucmd}},
     {MODKEY, XK_Return, spawn, {.v = termcmd}},
@@ -102,6 +93,8 @@ static const Key keys[] = {
     {MODKEY, XK_x, incrgaps, {.i = -3}},
     {MODKEY, XK_j, focusstack, {.i = +1}},
     {MODKEY, XK_k, focusstack, {.i = -1}},
+	{MODKEY | ShiftMask, XK_j, movestack, {.i = +1 } },
+	{MODKEY | ShiftMask, XK_k, movestack, {.i = -1 } },
     {MODKEY, XK_h, setmfact, {.f = -0.05}},
     {MODKEY, XK_l, setmfact, {.f = +0.05}},
     {MODKEY, XK_f, togglefullscr, {0}},
@@ -132,6 +125,7 @@ static const Key keys[] = {
     { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +5%") },
     { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%") },
     { 0, XF86XK_AudioMute, spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle") },
+    { 0, XF86XK_PowerOff, spawn, SHCMD("dmenu-power.sh") },
 
 };
 
