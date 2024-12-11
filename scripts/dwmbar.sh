@@ -82,7 +82,7 @@ weather() {
     case "$condition" in
     *clear*) icon=" " ;;
     *cloudy*) icon=" " ;;
-    *rain* | *drizzle* | *overcast*) icon=" " ;;
+    *rain* | *drizzle* | *Overcast*) icon=" " ;;
     *snow*) icon="󰜗 " ;;
     *thunderstorm*) icon="󰖓 " ;;
     *fog*) icon=" " ;;
@@ -122,5 +122,5 @@ while true; do
 
     [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ]
 
-    sleep 1 && xsetroot -name "$(date_time) ; $(vol)  $(battery)  $(brightness)  $(mem)  $(cpu)  $(down_speed) $(up_speed) "
+    sleep 1 && xsetroot -name "$(date_time) ; $(vol)  $(battery)  $(weather)  $(mem)  $(cpu)  $(temp) "
 done
